@@ -1,0 +1,17 @@
+Download, run and analyze the program  provided . Modify the downloaded program and add or modify the following modules:
+
+main() module which is calling the following functions having the prototypes:
+
+void menu();
+
+void processChoice(int &ch);
+
+void dispMemCount(); 
+
+Also include the following features:
+
+1) Add family membership for $60                            
+
+2) Counts of each type of membership type processed and display to the console at the end option (quit)
+
+Tip - use an array of counters.  int memCount[4] = {0};
