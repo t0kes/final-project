@@ -3,7 +3,7 @@
 using namespace std;
 
 void menu();
-void processChoice(int, int);
+void processChoice(int);
 
 
 // Constants for membership rates
@@ -17,21 +17,30 @@ double charges;       // Monthly charges
 
 int main()
 {
-	 menu();
-	
-	 processChoice(months, choice);
+	do
+	{
+		menu();
 
+		processChoice(choice);
+	}
+	while (choice != 4);
 	system("pause");
 	return 0;
 }
 
-void processChoice(int months, int choice)
+void processChoice( int ch)
 
 {
-	cout << "For how many months? ";
+	
+	if (ch != 4)
+	{
+		cout << "For how many months? ";
+		cin >> months;
+	}
+
 	cin >> months;
 
-	switch (choice)
+	switch (ch)
 	{
 	case 1: charges = months * ADULT_RATE;
 		break;
@@ -60,10 +69,5 @@ void menu()
 
 		}
 
-		if (choice != 4)
-		{
-			cout << "For how many months? ";
-			cin >> months;
-		}
-	return;
+		
 }
